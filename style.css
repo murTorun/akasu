@@ -465,8 +465,8 @@ section.third {
   font-style: italic;
 }
 
-.fa,
-.fa-solid {
+.container .fa,
+.container .fa-solid {
   padding: 7px;
   font-size: 20px;
   width: 20px;
@@ -494,7 +494,7 @@ section.third {
   gap: 8px;
 }
 
-.fa:hover {
+.container .fa:hover {
   transform: scale(1.35) rotate(360deg);
   color: white;
 }
