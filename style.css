@@ -1,0 +1,508 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  font-family: "Dosis", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  color: black;
+}
+.hero-section {
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  background-color: #f4f4f4;
+  position: relative;
+}
+
+.logo img {
+  width: calc(75vw * (650 / 1920));
+  height: calc(75vw * (650 / 1920) * 0.30433884297);
+  transition: width 0.3s, top 0.3s, left 0.3s;
+  position: relative;
+}
+
+.navbar {
+  position: fixed;
+  top: 8px;
+  width: 60%;
+  background-color: transparent;
+  padding: 10px 25px;
+  border-radius: 0 0 15px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  outline-color: transparent;
+  transition: background-color 0.3s, outline-color 0.3s;
+  z-index: 1000;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 45px;
+  width: 235px;
+}
+
+.navbar-logo img {
+  width: 50px;
+  transition: width 0.3s;
+}
+
+.navbar-logo {
+  opacity: 0;
+  transition: opacity 0.3s, width 0.3s;
+}
+
+.shrink .hero-section .logo img {
+  width: 50px;
+  height: calc(75vw * (650 / 1920) * 0.30433884297);
+  top: -50px;
+  left: -50px;
+}
+
+.shrink .navbar {
+  /* background-color: #a4f5cf; */
+  background-color: rgba(136, 252, 198, 0.4);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.shrink .navbar-logo {
+  opacity: 1;
+  width: auto;
+}
+.shrink .navbar-logo img {
+  width: 150px;
+}
+
+.navbar {
+  font-size: 1.35rem;
+}
+
+.hero-section {
+  height: 90vh;
+  width: 100%;
+  text-align: center;
+
+  background: -webkit-radial-gradient(
+    circle,
+    hsla(0, 0%, 100%, 1) 15%,
+    rgb(136, 252, 198) 41%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#A0ECC9", GradientType=1 );
+  position: relative;
+}
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("img/noise.png"); /* Add the path to your grain texture image */
+  opacity: 0.3; /* Adjust the opacity to your liking */
+  pointer-events: none; /* Ensure the overlay does not interfere with interactions */
+}
+.hero-section .logo {
+  margin-top: 25vh;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+.hero-section .logo h2 {
+  font-weight: 500;
+  font-style: italic;
+  font-optical-sizing: auto;
+  color: rgb(55, 131, 85);
+  margin: 0.85em;
+}
+
+.scroll-hero {
+  height: 50px;
+  width: 50px;
+
+  background-color: green;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+
+  font-weight: 200;
+  color: white;
+  transition: box-shadow 0.3s;
+}
+
+.scroll-hero:hover {
+  box-shadow: 3px 3px rgb(0, 73, 0);
+}
+
+#scroll-text {
+  margin-top: 1rem;
+  font-style: normal;
+  color: green;
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-family: "Dosis", sans-serif;
+  letter-spacing: 0.05rem;
+}
+
+.benefits-section h1 {
+  font-size: 2rem;
+}
+.benefits-section .title-paragraph {
+  font-weight: 600;
+  max-width: 800px;
+  margin-top: 0;
+}
+
+#benefits-cards-container:hover > .benefits-card::after {
+  opacity: 1;
+}
+.card:hover::before {
+  opacity: 1;
+}
+
+.benefits-card::before,
+.benefits-card::after {
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  transition: opacity 500ms;
+  width: 100%;
+}
+
+.benefits-card::before {
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    rgb(99, 187, 99) 25%,
+
+    transparent 40%
+  );
+  z-index: 3;
+}
+
+.benefits-card::after {
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y),
+    rgb(99, 187, 99) 25%,
+    transparent 40%
+  );
+  z-index: 1;
+}
+
+.benefits-card > .card-content {
+  background-color: #c9f8e2;
+  border-radius: inherit;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  inset: 3px;
+  padding: 10px;
+  position: absolute;
+  z-index: 2;
+  color: rgb(0, 73, 0) !important;
+  border: rgb(99, 187, 99) 1px solid;
+  box-shadow: 3px 3px rgba(117, 230, 117, 0.295);
+}
+
+#benefits-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  width: 100%;
+  justify-content: center;
+  margin-block: 120px;
+}
+.benefits-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: flex;
+  height: 295px;
+  flex-direction: column;
+  position: relative;
+  width: 340px;
+  transition: transform ease-in-out 0.15s;
+}
+.benefits-card:hover {
+  transform: scale(1.05);
+}
+.card-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.15em;
+}
+.card-title > h2 {
+  margin: 0;
+  flex-basis: 60%;
+}
+.card-icon {
+  margin-right: 15px;
+}
+
+.card-content p {
+  font-size: 16px;
+}
+
+section {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: 25px;
+}
+
+section.first {
+  margin-top: 3vh;
+}
+
+section h1 {
+  font-size: 3rem;
+  color: rgb(0, 73, 0);
+  text-align: center;
+  font-family: "Dosis", sans-serif;
+  margin-bottom: 0;
+}
+
+section.second {
+  margin-block: 120px;
+}
+
+.feature-container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 2px solid rgb(0, 73, 0);
+  border-radius: 10px;
+}
+
+.feature-text {
+  width: 75%;
+  padding: 20px;
+}
+.feature-text p {
+  color: rgb(0, 73, 0);
+  font-weight: 600;
+  font-size: 1.25em;
+}
+.feature-image {
+  width: 25%;
+  padding: 20px;
+}
+.feature-image img {
+  width: 100%;
+}
+.arrow {
+  margin-bottom: 20px;
+}
+
+.arrow {
+  display: flex;
+  justify-content: flex-end; /* Center arrows by default */
+  width: 400px;
+}
+
+.arrow:nth-of-type(4n + 2) {
+  justify-content: flex-start; /* Align odd arrows to the left */
+  width: 400px;
+}
+
+section.second h1,
+section.third h1 {
+  margin-bottom: 80px;
+}
+section.third {
+  margin-bottom: 120px;
+}
+.how-card-container {
+  display: flex;
+  gap: 36px;
+  text-align: center;
+  font-size: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.how-card {
+  border: 2px rgb(0, 73, 0) solid;
+  border-radius: 10px;
+  width: 250px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+  transition: transform 0.3s, box-shadow 0.6s;
+}
+.how-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 5px rgba(0, 73, 0, 0.3);
+}
+
+.how-card .material-icons {
+  font-size: 4rem;
+  transition: color 0.3s;
+}
+.how-card h2 {
+  transition: color 0.3s;
+}
+.how-card:hover .material-icons,
+.how-card:hover h2 {
+  color: rgb(0, 73, 0);
+}
+
+.container {
+  margin-top: 12vh;
+  display: flex;
+  align-items: center;
+  box-sizing: content-box;
+  width: 100%;
+}
+.team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 100px;
+  width: 100%;
+}
+.top-row,
+.bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 80px;
+  width: 100%;
+}
+@media only screen and (max-width: 950px) {
+  .top-column {
+    flex-direction: column;
+    gap: 100px;
+  }
+}
+.container img {
+  height: 450px;
+  width: 350px;
+  border-radius: 0 0 40% 40%;
+}
+
+.ahmet,
+.mert,
+.aysel,
+.selin,
+.murat {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.aysel img,
+.selin img {
+  height: 450px;
+  width: 350px;
+}
+.aysel img {
+  width: 280px;
+}
+.name {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.position,
+.profession {
+  color: rgb(147, 147, 147);
+}
+
+.position {
+  font-weight: bold;
+}
+.profession {
+  font-style: italic;
+}
+
+.fa,
+.fa-solid {
+  padding: 7px;
+  font-size: 20px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  color: white;
+  transition: all 0.35s ease-in-out;
+}
+.fa-linkedin {
+  background: rgb(13, 102, 194);
+}
+.fa-instagram {
+  background: rgb(240, 0, 117);
+}
+.fa-github {
+  background: black;
+}
+.fa-envelope {
+  background: blue;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.fa:hover {
+  transform: scale(1.35) rotate(360deg);
+  color: white;
+}
+
+section.fourth {
+  padding: 0;
+}
+section.fourth p {
+  text-align: center;
+  font-size: 1.5rem;
+}
