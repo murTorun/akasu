@@ -27,6 +27,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
     <script src="script.js" defer></script>
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -34,7 +35,7 @@
     />
   </head>
   <body>
-    <div class="hero-section">
+    <div id="akasu" class="hero-section">
       <div class="logo" id="logo">
         <img
           src="https://www.akasulama.com/wp-content/uploads/2024/07/akasu_logo_cizimli-yenisite1280cropped.png"
@@ -43,7 +44,7 @@
         <h2>Akıllı Tarım Teknolojileri</h2>
 
         <h2 id="scroll-text">Keşfet</h2>
-        <a class="scroll-hero-button" href="#firstScroll">
+        <a class="scroll-hero-button" href="#keşfet">
           <div class="scroll-hero">
             <i class="fa-solid fa-angle-down"></i>
           </div>
@@ -52,24 +53,28 @@
     </div>
     <nav class="navbar" id="navbar">
       <div class="nav-left">
-        <div class="nav-item"><a href="">İletişim</a></div>
-        <div class="nav-item"><a href="">Destekler</a></div>
+        <div class="nav-item"><a href="#iletişim">İletişim</a></div>
+        <div class="nav-item"><a href="#destekler">Destekler</a></div>
       </div>
       <div class="navbar-logo" id="navbar-logo">
-        <img
-          src="https://www.akasulama.com/wp-content/uploads/2024/07/akasu_logo_cizimli-yenisite1280cropped.png"
-          alt="Logo"
-        />
+        <a href="#akasu">
+          <img
+            src="https://www.akasulama.com/wp-content/uploads/2024/07/akasu_logo_cizimli-yenisite1280cropped.png"
+            alt="Logo"
+          />
+        </a>
       </div>
       <div class="nav-right">
-        <div class="nav-item"><a href="">Ön Sipariş</a></div>
+        <div class="nav-item"><a href="#ön-sipariş">Ön Sipariş</a></div>
 
-        <div class="nav-item"><a href="">Çiftçi Paneli</a></div>
+        <div class="nav-item">
+          <a href="https://panel.akasulama.com">Çiftçi Paneli</a>
+        </div>
       </div>
     </nav>
     <svg
-      id="firstScroll"
-      style="transform: rotate(180deg); transition: 0.3s"
+      id="keşfet"
+      style="transform: rotate(180deg); margin-top: -1px"
       viewBox="0 0 1440 140"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
@@ -88,10 +93,10 @@
     </svg>
 
     <section class="first" id="first">
-      <h1>Ne sunuyoruz?</h1>
+      <h1 class="hidden">Ne sunuyoruz?</h1>
 
       <div id="benefits-cards-container">
-        <div class="benefits-card">
+        <div class="benefits-card hidden">
           <div class="card-content">
             <div class="card-title">
               <h2>%50 Su Tasarrufu</h2>
@@ -112,7 +117,7 @@
             </p>
           </div>
         </div>
-        <div class="benefits-card">
+        <div class="benefits-card hidden">
           <div class="card-content">
             <div class="card-title">
               <h2>Yapay Zeka Destekli Bitki Takibi</h2>
@@ -131,7 +136,7 @@
           </div>
         </div>
 
-        <div class="benefits-card">
+        <div class="benefits-card hidden">
           <div class="card-content">
             <div class="card-title">
               <h2>2 Kat Ürün Verimliliği</h2>
@@ -157,11 +162,16 @@
         </div>
       </div>
 
-      <img class="otonom" width="250" src="img/otonom.png" alt="%100 Otonom" />
+      <img
+        class="otonom hidden"
+        width="250"
+        src="img/otonom.png"
+        alt="%100 Otonom"
+      />
     </section>
     <section class="second" id="second">
-      <h1>Nasıl Yapıyoruz?</h1>
-      <div class="feature-container">
+      <h1 class="hidden">Nasıl Yapıyoruz?</h1>
+      <div class="feature-container hidden-odd">
         <div class="feature-text">
           <h2>Sensör Verilerinin Toplanması</h2>
           <p>
@@ -177,7 +187,7 @@
         </div>
       </div>
 
-      <div class="arrow">
+      <div class="arrow hidden-odd">
         <svg
           width="100px"
           height="100px"
@@ -201,9 +211,9 @@
         </svg>
       </div>
 
-      <div class="feature-container">
+      <div class="feature-container hidden">
         <div class="feature-image">
-          <img src="img/lora.png" alt="LoRaWAN İletimi" />
+          <img src="img/sinyal.png" alt="LoRaWAN İletimi" />
         </div>
         <div class="feature-text">
           <h2>Verilerin LoRaWAN Üzerinden İletilmesi</h2>
@@ -217,7 +227,7 @@
         </div>
       </div>
 
-      <div class="arrow">
+      <div class="arrow hidden">
         <svg
           width="100px"
           height="100px"
@@ -241,7 +251,7 @@
         </svg>
       </div>
 
-      <div class="feature-container">
+      <div class="feature-container hidden-odd">
         <div class="feature-text">
           <h2>Verilerin İşlenmesi ve Analizi</h2>
           <p>
@@ -253,12 +263,12 @@
             şekilde büyümesini sağlar.
           </p>
         </div>
-        <div class="feature-image">
+        <div class="feature-image kosullar">
           <img src="img/kosullar.png" alt="Veri Analizi" />
         </div>
       </div>
 
-      <div class="arrow">
+      <div class="arrow hidden-odd">
         <svg
           width="100px"
           height="100px"
@@ -282,7 +292,7 @@
         </svg>
       </div>
 
-      <div class="feature-container">
+      <div class="feature-container hidden">
         <div class="feature-image">
           <img src="img/wifi.png" alt="Uzaktan Kontrol" />
         </div>
@@ -298,7 +308,7 @@
         </div>
       </div>
 
-      <div class="arrow">
+      <div class="arrow hidden">
         <svg
           width="100px"
           height="100px"
@@ -322,7 +332,7 @@
         </svg>
       </div>
 
-      <div class="feature-container">
+      <div class="feature-container hidden-odd">
         <div class="feature-text">
           <h2>Verilerin Görselleştirilmesi ve İzlenmesi</h2>
           <p>
@@ -339,53 +349,63 @@
       </div>
     </section>
     <section class="third">
-      <h1>AKASU Ailesine Nasıl Katılabilirim?</h1>
+      <h1 class="hidden">AKASU Ailesine Nasıl Katılabilirim?</h1>
       <div class="how-card-container">
-        <div class="how-card">
-          <h2>01</h2>
-          <p>İletişim adreslerimiz üzerinden bizimle iletişime geçin.</p>
-          <div class="icon"><span class="material-icons">phone</span></div>
-        </div>
-        <div class="how-card">
-          <h2>02</h2>
-          <p>
-            Tarım arazinize en uygun ürün çeşidini sizlere sunalım ve fiyat
-            teklifinde bulunalım.
-          </p>
-          <div class="icon">
-            <span class="material-icons">local_offer</span>
+        <div class="hidden">
+          <div class="how-card">
+            <h2>01</h2>
+            <p>İletişim adreslerimiz üzerinden bizimle iletişime geçin.</p>
+            <div class="icon"><span class="material-icons">phone</span></div>
           </div>
         </div>
-        <div class="how-card">
-          <h2>03</h2>
-          <p>Arazinize gelerek ücretsiz kurulum hizmetimizi sunalım.</p>
-          <div class="icon"><span class="material-icons">build</span></div>
-        </div>
-        <div class="how-card">
-          <h2>04</h2>
-          <p>
-            Kurulum sonrası sizi cihazın kontrolü ve takibi hakkında
-            bilgilendirelim.
-          </p>
-          <div class="icon">
-            <span class="material-icons">settings_remote</span>
+        <div class="hidden">
+          <div class="how-card">
+            <h2>02</h2>
+            <p>
+              Tarım arazinize en uygun ürün çeşidini sizlere sunalım ve fiyat
+              teklifinde bulunalım.
+            </p>
+            <div class="icon">
+              <span class="material-icons">local_offer</span>
+            </div>
           </div>
         </div>
-        <div class="how-card">
-          <h2>05</h2>
-          <p>
-            Artık siz de AKASU ailemizdesiniz! 7/24 teknik desteğimiz üzerinden
-            bize ulaşabilirsiniz.
-          </p>
-          <div class="icon">
-            <span class="material-icons">support_agent</span>
+        <div class="hidden">
+          <div class="how-card">
+            <h2>03</h2>
+            <p>Arazinize gelerek ücretsiz kurulum hizmetimizi sunalım.</p>
+            <div class="icon"><span class="material-icons">build</span></div>
+          </div>
+        </div>
+        <div class="hidden">
+          <div class="how-card">
+            <h2>04</h2>
+            <p>
+              Kurulum sonrası sizi cihazın kontrolü ve takibi hakkında
+              bilgilendirelim.
+            </p>
+            <div class="icon">
+              <span class="material-icons">settings_remote</span>
+            </div>
+          </div>
+        </div>
+        <div class="hidden">
+          <div class="how-card">
+            <h2>05</h2>
+            <p>
+              Artık siz de AKASU ailemizdesiniz! 7/24 teknik desteğimiz
+              üzerinden bize ulaşabilirsiniz.
+            </p>
+            <div class="icon">
+              <span class="material-icons">support_agent</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="fourth">
-      <h1>Bize Ulaşın!</h1>
-      <p>
+    <section class="fourth" id="iletişim">
+      <h1 class="hidden">Bize Ulaşın!</h1>
+      <p class="hidden">
         Bize iletisim@akasulama.com adresinden ulaşabilirsiniz.
         <br />
         Ayrıca aşağıda ekibimizin iletişim adresleri de mevcut.
@@ -393,7 +413,7 @@
       <div class="container">
         <div class="team">
           <div class="top-row">
-            <div class="ahmet">
+            <div class="ahmet hidden">
               <img
                 src="https://www.akasulama.com/wp-content/uploads/2024/05/a9344ecb-f352-403e-9b62-77d04400cafa-removebg-preview-e1716211068819.png"
                 alt="ahmet kağan örün"
@@ -432,7 +452,7 @@
               </div>
             </div>
 
-            <div class="selin">
+            <div class="selin hidden-odd">
               <img
                 src="https://www.akasulama.com/wp-content/uploads/2024/05/selin.png"
                 alt="Selin Saygel"
@@ -455,12 +475,12 @@
           </div>
 
           <div class="bottom-row">
-            <div class="murat">
+            <div class="murat hidden">
               <img
                 src="https://www.akasulama.com/wp-content/uploads/2024/05/murat-e1722106077339.png"
                 alt="Muhammet Murat Torun"
               />
-              <div class="name">Muhammet Murat TORUN</div>
+              <div class="name"><p>Muhammet Murat TORUN</p></div>
               <div class="position">Web Geliştiricisi</div>
               <div class="profession">İzmir Çiğli Fen Lisesi</div>
               <div class="social-links">
@@ -473,7 +493,7 @@
                 </div>
               </div>
             </div>
-            <div class="aysel">
+            <div class="aysel hidden-odd">
               <img
                 src="https://www.akasulama.com/wp-content/uploads/2023/09/aysel-hoca-foto-edited.png"
                 alt="aysel töre"
@@ -501,6 +521,306 @@
         </div>
       </div>
     </section>
-    <section class="fifth" style="height: 25vh"></section>
+    <section class="fifth hidden" id="destekler">
+      <h1 class="hidden">Teşekkürler</h1>
+      <div class="marquee">
+        <ul class="marquee-content">
+          <li>
+            <img
+              decoding="async"
+              src="https://www.akasulama.com/wp-content/uploads/2023/08/qtq_95.webp"
+              alt="Referans Logo 1"
+              class="kolektif"
+              data-href="https://karsiyakakolektif.com/"
+            />
+          </li>
+          <li>
+            <img
+              decoding="async"
+              src="https://www.akasulama.com/wp-content/uploads/2023/06/logo.png"
+              alt="Referans Logo 2"
+              class="ittm"
+              data-href="https://ittm.itb.org.tr/"
+            />
+          </li>
+          <li>
+            <img
+              decoding="async"
+              src="https://www.akasulama.com/wp-content/uploads/2023/06/ITB_Yesil_TR.png"
+              alt="Referans Logo 3"
+              class="itb"
+              data-href="https://itb.org.tr/"
+            />
+          </li>
+          <!-- <li>
+                <img decoding="async"
+                    src="https://www.akasulama.com/wp-content/uploads/2023/06/12095132_CFL_LOGO_2020_4-1.png"
+                    alt="Referans Logo 4"
+                    class="cfl"
+                    data-href="https://ciglifen.meb.k12.tr/"
+                />
+            </li> -->
+          <li>
+            <img
+              decoding="async"
+              src="https://www.akasulama.com/wp-content/uploads/2023/06/t3-logo-TR-01.png"
+              alt="Referans Logo 5"
+              class="teknofest"
+              data-href="https://www.teknofest.org/"
+            />
+          </li>
+          <!-- <li>
+                <img decoding="async"
+                    src="https://www.akasulama.com/wp-content/uploads/2023/11/Kluplogobeyazorji.png"
+                    alt="Referans Logo 6"
+                    class="optimum"
+                    data-href="https://optimumkulup.mcbu.edu.tr/"
+                />
+            </li> -->
+          <li>
+            <img
+              decoding="async"
+              src="https://www.akasulama.com/wp-content/uploads/2024/03/btm-logo.png"
+              alt="Referans Logo 7"
+              class="btm"
+              data-href="https://btm.istanbul/"
+            />
+          </li>
+          <li>
+            <img
+              decoding="async"
+              src="https://www.akasulama.com/wp-content/uploads/2023/08/qtq_95.webp"
+              alt="Referans Logo 1"
+              class="kolektif"
+              data-href="https://karsiyakakolektif.com/"
+            />
+          </li>
+          <li>
+            <img
+              decoding="async"
+              src="https://www.akasulama.com/wp-content/uploads/2023/06/logo.png"
+              alt="Referans Logo 2"
+              class="ittm"
+              data-href="https://ittm.itb.org.tr/"
+            />
+          </li>
+          <li>
+            <img
+              decoding="async"
+              src="https://www.akasulama.com/wp-content/uploads/2023/06/ITB_Yesil_TR.png"
+              alt="Referans Logo 3"
+              class="itb"
+              data-href="https://itb.org.tr/"
+            />
+          </li>
+          <li>
+            <img
+              decoding="async"
+              src="https://www.akasulama.com/wp-content/uploads/2023/06/t3-logo-TR-01.png"
+              alt="Referans Logo 5"
+              class="teknofest"
+              data-href="https://www.teknofest.org/"
+            />
+          </li>
+          <li>
+            <img
+              decoding="async"
+              src="https://www.akasulama.com/wp-content/uploads/2024/03/btm-logo.png"
+              alt="Referans Logo 7"
+              class="btm"
+              data-href="https://btm.istanbul/"
+            />
+          </li>
+        </ul>
+      </div>
+
+      <style>
+        :root {
+          --marquee-width: 80vw;
+          --marquee-height: 20vh;
+          /* --marquee-elements: 12; */ /* javascriptle duzenleniyo */
+          --marquee-elements-displayed: 5;
+          --marquee-element-width: calc(
+            var(--marquee-width) / var(--marquee-elements-displayed)
+          );
+          --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
+        }
+
+        .marquee {
+          width: var(--marquee-width);
+          height: var(--marquee-height);
+          color: #eee;
+          overflow: hidden;
+          position: relative;
+          margin-top: 80px;
+          width: 120%;
+          display: flex;
+          align-items: center;
+        }
+        .marquee:before,
+        .marquee:after {
+          position: absolute;
+          top: 0;
+          width: 10rem;
+          height: 100%;
+          content: "";
+          z-index: 1;
+        }
+        .marquee:before {
+          border-radius: 20px 0px 0px 20px;
+
+          left: 0;
+          background: linear-gradient(
+            to right,
+            rgba(136, 252, 150, 0.4) 0%,
+            transparent 75%
+          );
+        }
+        .marquee:after {
+          right: 0;
+          border-radius: 0 20px 20px 0;
+          background: linear-gradient(
+            to left,
+            rgba(136, 252, 150, 0.4) 0%,
+            transparent 75%
+          );
+        }
+        .marquee-content {
+          list-style: none;
+          height: 100%;
+          display: flex;
+          animation: scrolling var(--marquee-animation-duration) linear infinite;
+        }
+        .marquee-content:hover {
+          animation-play-state: paused;
+        }
+        .marquee-content li:hover {
+          border: rgb(175, 240, 175) 3px solid;
+          border-radius: 20px;
+          cursor: pointer;
+        }
+        @keyframes scrolling {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(
+              calc(-1 * var(--marquee-element-width) * var(--marquee-elements))
+            );
+          }
+        }
+        .marquee-content li {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          /* text-align: center; */
+          flex-shrink: 0;
+          width: var(--marquee-element-width);
+          max-height: 100%;
+          font-size: calc(var(--marquee-height) * 3 / 4); /* 5rem; */
+          white-space: nowrap;
+          transition: all ease-in-out 0.1s;
+        }
+
+        .marquee-content li img {
+          width: 50%;
+        }
+        .marquee-content li .ittm,
+        .marquee-content li .kolektif {
+          width: 60%;
+        }
+
+        @media (max-width: 600px) {
+          html {
+            font-size: 12px;
+          }
+          :root {
+            --marquee-width: 100vw;
+            --marquee-height: 16vh;
+            --marquee-elements-displayed: 3;
+          }
+          .marquee:before,
+          .marquee:after {
+            width: 5rem;
+          }
+        }
+      </style>
+      <script>
+        const root = document.documentElement;
+        const marqueeElementsDisplayed = getComputedStyle(
+          root
+        ).getPropertyValue("--marquee-elements-displayed");
+        const marqueeContent = document.querySelector("ul.marquee-content");
+
+        root.style.setProperty(
+          "--marquee-elements",
+          marqueeContent.children.length
+        );
+
+        for (let i = 0; i < marqueeElementsDisplayed; i++) {
+          marqueeContent.appendChild(
+            marqueeContent.children[i].cloneNode(true)
+          );
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+          const listItems = document.querySelectorAll(".marquee-content li");
+
+          listItems.forEach((item) => {
+            item.addEventListener("click", function () {
+              const href = this.querySelector("img").getAttribute("data-href");
+              if (href) {
+                window.open(href, "_blank");
+              }
+            });
+          });
+        });
+      </script>
+    </section>
+    <section class="sixth hidden" id="ön-sipariş">
+      <p>
+        Artık akıllı tarım teknolojilerine ilk adımınızı atmak mı istiyorsunuz?
+        <br />
+        Aşağıdaki formumuzu doldurun, size ulaşalım!
+      </p>
+      <div class="iframe-wrapper">
+        <iframe
+          class="iframe-desktop"
+          src="https://docs.google.com/forms/d/e/1FAIpQLScbrQuVwZrxPCa5ADjHfaHlAWo6Zz_t5OBV3sZmObAOrNlbRw/viewform?embedded=true"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          >Yükleniyor…</iframe
+        >
+      </div>
+    </section>
+    <footer>
+      <div class="footer-container">
+        <div class="akasu-contacts-container">
+          <div class="footer-left">
+            <img
+              src="https://www.akasulama.com/wp-content/uploads/2024/07/akasu_logo_cizimli-yenisite1280cropped.png"
+              alt=""
+            />
+            <p>
+              <a href="mailto:iletisim@akasulama.com">iletisim@akasulama.com</a>
+            </p>
+          </div>
+          <div class="vertical-line"></div>
+          <div class="contact-info">
+            <div>
+              <a href="https://www.instagram.com/akasulama/"
+                ><i class="fa fa-instagram"></i
+              ></a>
+            </div>
+            <div>
+              <a href="https://www.linkedin.com/company/akasu/"
+                ><i class="fa fa-linkedin"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

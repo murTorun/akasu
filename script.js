@@ -28,3 +28,18 @@ document.getElementById("benefits-cards-container").onmousemove = (e) => {
     card.style.setProperty("--mouse-y", `${y}px`);
   }
 };
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    } /* else {
+      entry.target.classList.remove("show");
+    } */
+  });
+});
+const hiddenElements = document.querySelectorAll(".hidden");
+const hiddenOddElements = document.querySelectorAll(".hidden-odd");
+hiddenElements.forEach((el) => observer.observe(el));
+hiddenOddElements.forEach((el) => observer.observe(el));

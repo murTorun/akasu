@@ -1,0 +1,98 @@
+@media screen and (max-width: 1200px) {
+  nav,
+  .navbar,
+  section {
+    width: 100%;
+  }
+  .hero-section {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-section .logo {
+    margin-top: 0;
+  }
+  .marquee {
+    max-width: 100%;
+  }
+  :root {
+    --marquee-elements-displayed: 2 !important;
+  }
+  .nav-right,
+  .nav-left {
+    display: none;
+  }
+  .navbar {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 850px) {
+  .feature-container:nth-of-type(4n + 1) {
+    flex-direction: column-reverse;
+  }
+  .feature-container:nth-of-type(4n + 3) {
+    flex-direction: column;
+  }
+  .feature-container .feature-image {
+    width: 150px;
+  }
+  .feature-container .feature-text {
+    width: auto;
+    text-align: left;
+  }
+  .kosullar,
+  .kosullar img {
+    width: 200px !important;
+  }
+  .kosullar {
+    padding: 0;
+    margin: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    font-size: 16px;
+  }
+  section.fourth img {
+    width: 290px;
+    height: 373px;
+  }
+  section.fourth .aysel img {
+    width: 280px;
+    height: 420px;
+  }
+}
+@media screen and (max-width: 400px) {
+  section.second {
+    padding: 5px;
+  }
+  .feature-container {
+    padding: 0;
+  }
+  :root {
+    --marquee-elements-displayed: 1.8 !important;
+    --marquee-animation-duration: 20s !important;
+  }
+}
+@media screen and (max-width: 374px) {
+  .benefits-card {
+    height: 350px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .benefits-card {
+    height: 500px;
+  }
+  section.sixth {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  iframe.iframe-desktop {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
